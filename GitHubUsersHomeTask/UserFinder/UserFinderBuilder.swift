@@ -9,9 +9,11 @@ import UIKit
 
 class UserFinderBuilder {
     
+    
     //For future use
     
-    func build() {
-        
+    func build() -> UIViewController {
+        let vc = UserFinderVC()
+        return vc
     }
 }

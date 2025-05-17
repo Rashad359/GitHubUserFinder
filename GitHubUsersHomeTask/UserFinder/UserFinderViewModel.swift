@@ -18,7 +18,7 @@ protocol UserFinderDelegate {
 
 class UserFinderViewModel {
     
-    let networkManager: NetworkManager = DependencyContainer.shared.networkManager
+    private let networkManager: NetworkManager = DependencyContainer.shared.networkManager
     
     private var delegate: UserFinderDelegate? = nil
     

@@ -6,9 +6,17 @@
 //
 
 struct GitUserModel: Decodable {
-    let avatar_url: String?
+    let avatarUrl: String?
     let login: String?
     let followers: Int?
     let following: Int?
     let public_repos: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case avatarUrl = "avatar_url"
+        case login
+        case followers
+        case following
+        case public_repos
+    }
 }
