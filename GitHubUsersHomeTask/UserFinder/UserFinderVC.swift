@@ -32,6 +32,7 @@ final class UserFinderVC: BaseViewController {
         textField.placeholder = "Write username"
         textField.backgroundColor = .systemRed
         textField.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        textField.autocapitalizationType = .none
         return textField
     }()
     
