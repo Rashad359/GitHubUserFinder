@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class UserFinderVC: BaseViewController {
+final class UserFinderVC: BaseViewController {
     
     private let viewModel = UserFinderViewModel()
     

@@ -12,7 +12,7 @@ enum State {
     case error(Error)
 }
 
-protocol UserFinderDelegate {
+protocol UserFinderDelegate: AnyObject {
     func render(_ state: State)
 }
 
@@ -20,7 +20,7 @@ class UserFinderViewModel {
     
     private let networkManager: NetworkManager = DependencyContainer.shared.networkManager
     
-    private var delegate: UserFinderDelegate? = nil
+    private weak var delegate: UserFinderDelegate? = nil
     
     func subscribe(_ delegate: UserFinderDelegate) {
         self.delegate = delegate
