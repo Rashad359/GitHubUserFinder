@@ -185,7 +185,7 @@ extension UserFinderVC: UserFinderDelegate {
                 self.userName.text = model.login ?? "User not found"
                 self.followers.text = "\(model.followers ?? 0) followers"
                 self.following.text = "\(model.following ?? 0) following"
-                self.publicRepos.text = "\(model.public_repos ?? 0) public repos"
+                self.publicRepos.text = "\(model.publicRepos ?? 0) public repos"
                 self.userImage.kf.setImage(with: URL(string: model.avatarUrl ?? stockImage))
                 if self.userName.text == model.login {
                     self.showAlert(title: "Success", message: "User is found")

@@ -10,13 +10,13 @@ struct GitUserModel: Decodable {
     let login: String?
     let followers: Int?
     let following: Int?
-    let public_repos: Int?
+    let publicRepos: Int?
     
     enum CodingKeys: String, CodingKey {
         case avatarUrl = "avatar_url"
         case login
         case followers
         case following
-        case public_repos
+        case publicRepos = "public_repos"
     }
 }
