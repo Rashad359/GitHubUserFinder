@@ -55,7 +55,7 @@ final class UserFinderVC: BaseViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
-        imageView.image = UIImage(named: "ordinaryImage")
+        imageView.image = UIImage(named: "gitDefaultImage")
         imageView.heightAnchor.constraint(equalToConstant: 120).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 120).isActive = true
         imageView.layer.cornerRadius = 60
@@ -175,7 +175,7 @@ final class UserFinderVC: BaseViewController {
     }
 }
 
-private let stockImage: String = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/500px-Image_created_with_a_mobile_phone.png"
+private let stockImage: String = "https://i.sstatic.net/frlIf.png"
 
 extension UserFinderVC: UserFinderDelegate {
     func render(_ state: State) {
