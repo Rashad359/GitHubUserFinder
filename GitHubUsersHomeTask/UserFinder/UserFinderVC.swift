@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class UserFinderVC: BaseViewController {
+final class UserFinderVC: BaseViewController {
     
     private let viewModel = UserFinderViewModel()
     
@@ -55,7 +55,7 @@ class UserFinderVC: BaseViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
-        imageView.image = UIImage(named: "ordinaryImage")
+        imageView.image = UIImage(named: "gitDefaultImage")
         imageView.heightAnchor.constraint(equalToConstant: 120).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 120).isActive = true
         imageView.layer.cornerRadius = 60
@@ -175,7 +175,7 @@ class UserFinderVC: BaseViewController {
     }
 }
 
-private let stockImage: String = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/500px-Image_created_with_a_mobile_phone.png"
+private let stockImage: String = "https://i.sstatic.net/frlIf.png"
 
 extension UserFinderVC: UserFinderDelegate {
     func render(_ state: State) {
@@ -185,7 +185,7 @@ extension UserFinderVC: UserFinderDelegate {
                 self.userName.text = model.login ?? "User not found"
                 self.followers.text = "\(model.followers ?? 0) followers"
                 self.following.text = "\(model.following ?? 0) following"
-                self.publicRepos.text = "\(model.public_repos ?? 0) public repos"
+                self.publicRepos.text = "\(model.publicRepos ?? 0) public repos"
                 self.userImage.kf.setImage(with: URL(string: model.avatarUrl ?? stockImage))
                 if self.userName.text == model.login {
                     self.showAlert(title: "Success", message: "User is found")
